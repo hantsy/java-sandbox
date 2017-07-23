@@ -91,7 +91,28 @@ Open your terminal(cmd under Windows or Gnome Terminal under Linux/Gnome) and ty
 jshell>
 ```
 
-It shows the welcome info, you can type `/help` to get the help info of `jshell`.
+It shows the welcome info.
+
+Type `/help intro` to get a simple introduction to JShell.
+
+```
+jshell> /help intro
+|
+|  intro
+|
+|  The jshell tool allows you to execute Java code, getting immediate results.
+|  You can enter a Java definition (variable, method, class, etc), like:  int x = 8
+|  or a Java expression, like:  x + x
+|  or a Java statement or import.
+|  These little chunks of Java code are called 'snippets'.
+|
+|  There are also jshell commands that allow you to understand and
+|  control what you are doing, like:  /list
+|
+|  For a list of commands: /help
+```
+
+Type `/help` to get the all help info of `jshell`.
 
 Try add some code pieces to taste Java language features.
 
@@ -151,7 +172,7 @@ jshell> /vars
 |    boolean $10 = false
 ```
 
-Every step JShell creates a variable to mark it, if you do not define an explicit variable, it will assign one for you.
+Every step JShell creates a variable to mark it, if you do not define an explicit variable, it will assign one for you. You can refer any defined before in your current code snippets.
 
 ```
 jshell> /exit

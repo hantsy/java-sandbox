@@ -5,6 +5,8 @@
  */
 package com.hantsylab.java9hacks;
 
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -16,15 +18,21 @@ import java.util.Set;
 public class ImmutableCollectionsSample {
 
     public static final void main(String[] args) {
-        
+
+        Set<String> set0 = new HashSet<>();
+        set0.add("One");
+        set0.add("Two");
+        set0.add("Three");
+        set0.add("Four");
+        Set<String> unmodifiableSet = Collections.unmodifiableSet(set0);
+        System.out.println("set0:" + unmodifiableSet);
+
 //java 5        
 //        Set<String> units = new HashSet<>(Arrays.asList(“One”, “Two”, “Three”, “Four”));
 //        units = Collections.unmodifiableSet(units);
-
 //java 8
 //        Stream.of("One", "Two", "Three", "Four")
 //                .collect(collectingAndThen(toSet(), Collections::unmodifiableSet));
-
         Set<String> set = Set.of("One", "Two", "Three", "Four");
 
         System.out.println("set::" + set);

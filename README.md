@@ -79,10 +79,9 @@ The collections instantiated by these factory methods have some specific charact
 
 ## JShell
 
-Unlike Ruby, Python, and other JVM language, such as Groovy, Java itself lacks an interactive shell for a long time. Some 3rd party projects tried to fill the blank, such as Apache Bean Shell. 
+Unlike Ruby, Python, and other JVM language, such as Groovy, Java itself lacks an interactive shell for a long time. Some 3rd party projects tried to fill the blank, such as Apache Bean Shell. Java 9 brings a built-in shell.
 
-Open your terminal and type `jshell` to start up JShell console.
-
+Open your terminal(cmd under Windows or Gnome Terminal under Linux/Gnome) and type `jshell`(make sure it is in your PATH environment variable or use the full path) to start up JShell console.
 
 ```
 #jshell
@@ -94,7 +93,7 @@ jshell>
 
 It shows the welcome info, you can type `/help` to get the help info of `jshell`.
 
-You can try add some code pieces to taste Java language features.
+Try add some code pieces to taste Java language features.
 
 ```
 jshell> int i=1+1;
@@ -105,6 +104,11 @@ jshell>
 jshell> System.out.println(i);
 2
 
+```
+
+Test the new ImmutableCollections features we have dicussed in the last section.
+
+```
 jshell> import java.util.*;
 
 jshell> Set.of("One", "Two", "Three", "Four");
@@ -132,6 +136,11 @@ jshell> set.add(null);
 |        at ImmutableCollections.uoe (ImmutableCollections.java:70)
 |        at ImmutableCollections$AbstractImmutableSet.add (ImmutableCollections.java:280)
 |        at (#10:1)
+```
+
+As you see, the created collections do not allow to add or remove items.
+
+```
 jshell> /vars
 |    int i = 2
 |    Set<String> $4 = [Four, One, Three, Two]
@@ -140,6 +149,13 @@ jshell> /vars
 |    boolean $8 = false
 |    Set<String> set = [Four, One, Three, Two]
 |    boolean $10 = false
+```
+
+Every step JShell creates a variable to mark it, if you do not define an explicit variable, it will assign one for you.
+
+```
+jshell> /exit
+|  Goodbye
 ```
 
 Type `/exit` to quit JShell console.

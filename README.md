@@ -183,7 +183,12 @@ Type `/exit` to quit JShell console.
 
 ## References
 
-* [Immutable Collections in Java 9 ](https://dzone.com/articles/immutable-collections-in-java-9)
-* [Immutable Collections Explained](https://github.com/google/guava/wiki/ImmutableCollectionsExplained)
-* [What is new in JDK 9](https://www.quora.com/What-is-new-in-JDK-9)
-* [Devoxx 55 New Features in JDK 9 by Simon Ritter](https://goo.gl/d2F7rH)
+* [Immutable Collections in Java 9 ](https://dzone.com/articles/immutable-collections-in-java-9), DZone
+* [Process Handling in Java 9 ](https://dzone.com/articles/process-handling-in-java-9), DZone
+* [Immutable Collections Explained](https://github.com/google/guava/wiki/ImmutableCollectionsExplained), Google Guava Github Wiki
+* [What is new in JDK 9](https://www.quora.com/What-is-new-in-JDK-9), Quora
+* [55 New Features in JDK 9 by Simon Ritter](https://goo.gl/d2F7rH), Devoxx Session
+* [Painlessly Migrating to Java Jigsaw Modules - a Case Study](https://www.infoq.com/articles/Java-Jigsaw-Migration-Guide)
+* [Java 9 and Intellij IDEA](https://dzone.com/articles/java-9-and-intellij-idea)
+* [Java Magazine: Sept/Oct 2017](http://www.javamagazine.mozaicreader.com/SeptOct2017#&pageSet=0&page=0&contentItem=0)
+* [Java 9: The Good, the Bad, and Private Interface Methods ](https://dzone.com/articles/java-9-the-good-the-bad-and-private-interface-meth)

@@ -83,7 +83,7 @@ public class TextBlockExample {
         System.out.println("string after translateEscapes():\n"+ translated);
 
 
-        String s="  there are 2 spaces in the front of line one\n    the second line begins with 4 spades\\n      the third line has 6 spaces at the beginning";
+        String s="  there are 2 spaces in the front of line one\n    the second line begins with 4 spaces and ends with an escaped new line\\n      the third line has 6 spaces at the beginning";
         System.out.println("original string :\n"+ s);
         System.out.println("original string after stripIntent :\n"+ s.stripIndent());
         System.out.println("original string after translateEscapes :\n"+ s.translateEscapes());

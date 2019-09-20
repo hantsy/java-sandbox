@@ -52,7 +52,7 @@ public class TextBlockExample {
 
         String hello = """
             Hello,
-            Java 13,
+            Java 13
             """;
 
         String hello2 = """

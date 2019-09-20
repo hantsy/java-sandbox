@@ -19,7 +19,7 @@ public class PatternMatchingExample {
                 out = "green";
                 break;
             case B:
-                out = "glue";
+                out = "blue";
                 break;
             default:
                 out = "unknown";
@@ -34,7 +34,7 @@ public class PatternMatchingExample {
             case G:
                 yield "green";
             case B:
-                yield "glue";
+                yield "blue";
             default:
                 yield "unknown";
         };
@@ -45,7 +45,7 @@ public class PatternMatchingExample {
         String out = switch (c) {
             case R -> "red";
             case G -> "green";
-            case B -> "glue";
+            case B -> "blue";
             default -> "unknown";
         };
         System.out.println("the color is " + out);
@@ -72,7 +72,7 @@ public class PatternMatchingExample {
         System.out.println("using the new pattern matching:");
         printColorPatternMatching(Color.B);
 
-        System.out.println("grouped labeled: ");
+        System.out.println("grouped label in pattern matching: ");
         printDayOfWeek();
     }
 }

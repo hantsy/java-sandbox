@@ -1,6 +1,6 @@
 # Next generation of Java Sandbox
 
-This is a personal sandbox to experience the last Java language features that introduced in Java 8 and later.  
+This is a personal sandbox to keep up with the latest Java language features that introduced in Java 8 and later.  
 
 
 
@@ -14,7 +14,7 @@ You can download a copy of JDK  redistribution from the following website for de
 
 * Azul JDK, https://www.azul.com/downloads/zulu-community/
 
-Additionally, IBM, Amazon, Alibaba, Microsoft, Redhat  have their own Java redistribution.  
+Additionally, IBM, Amazon, Alibaba, Microsoft, RedHat  have maintained their own Java redistributions.  
 
 ## Notes
 
@@ -73,3 +73,5 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 
 * [Programmer's Guide To Text Blocks](http://cr.openjdk.java.net/~jlaskey/Strings/TextBlocksGuide_v9.html) 
 * [Definitive Guide To Switch Expressions In Java 13](https://blog.codefx.org/java/switch-expressions/)
+* [Java 13 – a deep dive into the JDK’s new features](https://jaxenter.com/java-13-jdk-deep-dive-new-features-162272.html), JAXcenter
+* [Java 13 – why text blocks are worth the wait](https://jaxenter.com/java-13-text-blocks-162278.html), JAXcenter 

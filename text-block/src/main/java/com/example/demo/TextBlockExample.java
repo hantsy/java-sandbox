@@ -61,10 +61,11 @@ public class TextBlockExample {
         """;
 
         System.out.println("Hello1:\n" + hello);
-        System.out.println("Hello2:\n" + hello);
+        System.out.println("Hello2:\n" + hello2);
 
         System.out.println("hello is equals hello2:" + hello.equals(hello2));
-
+        System.out.println("hello after stripIntent():\n" + hello.stripIndent());
+        System.out.println("hello2 after stripIntent():\n" + hello2.stripIndent());
         System.out.println("hello is equals hello2 after stripIndent():" + hello.stripIndent().equals(hello2.stripIndent()));
 
 

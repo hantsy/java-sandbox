@@ -1,194 +1,75 @@
-# java9-sandbox
+# Next generation of Java Sandbox
 
-The long-waiting Java 9 is close to be done, a lots of new features were added in this release, including the controversial Java Platform Module System, the new Flow API(as Java built-in Reactive Stream implementation), and numberous language improvements.
+This is a personal sandbox to experience the last Java language features that introduced in Java 8 and later.  
 
-## Prerequisite
 
-1. Install JDK 9 from http://jdk.java.net/9
-2. NetBeans IDE 9 nightly or Eclipse Oxygen(4.7) with Java 9 support(install Java 9 beta support in Eclipse Marketplace)
 
-## Immutable Collections
+## Getting JDK 
 
-Generally creating an immutable collection could like:
+You can download a copy of JDK  redistribution from the following website for development purpose. 
 
-```java
-Set<String> set = new HashSet<>();
-set.add("One");
-set.add("Two");
-set.add("Three");
-set.add("Four");
-Collections.unmodifiableSet(set);
-```
+* OpenJDK, https://openjdk.java.net
+* Oracle JDK, https://java.oracle.com
+* AdoptOpenJDK, https://adoptopenjdk.net/
 
-If using Java 5, this can be simplified as:
+* Azul JDK, https://www.azul.com/downloads/zulu-community/
 
-```
-Set<String> units = new HashSet<>(Arrays.asList(“One”, “Two”, “Three”, “Four”));
-units = Collections.unmodifiableSet(units);
-```
+Additionally, IBM, Amazon, Alibaba, Microsoft, Redhat  have their own Java redistribution.  
 
-Or using Java 8 Stream API.
+## Notes
 
-```
-Stream.of("One", "Two", "Three", "Four")
-	.collect(collectingAndThen(toSet(), Collections::unmodifiableSet));
-```
+### Java 8(LTS)
 
-Google Guava provides simple immutable collection utilities.
 
-```
-ImmutableSet.of("One", "Two", "Three", "Four");
-```
 
-Or create an immutable set from an existing set.
+### Java 9
 
-```
-ImmutableSet.copyOf(set);
-```
+The long-waiting Java 9 adds plenty of new features, including the controversial Java Platform Module System, the new Flow API(as Java built-in Reactive Stream implementation), and numerous language improvements.
 
-In Java 9, a static factory method `of` is introduced in `Set`, `List`, `Map` interface to create an instance quickly.
+* [JShell](./jshell.md) 
+* [Immutable Collections](./immutable-collections.md)
+* Java Module System
+* Java Flow  API - The ReactiveStream adopting
 
-```java
+ ### Java 10
 
-Set<String> set = Set.of("One", "Two", "Three", "Four");
 
-System.out.println("set::" + set);
 
-List<String> list = List.of("One", "Two", "Three", "Four");
+### Java 11(LTS)
 
-System.out.println("list::" + list);
 
-Map<Integer, String> map = Map.of(1, "One", 2, "Two", 3, "Three", 4, "Four");
 
-System.out.println("map::" + map);
-```
+### Java 12
 
-In the background, they invoke a `ImmutableCollections` utility class. 
 
-The collections instantiated by these factory methods have some specific characteristics:
 
-* **Immutable**: Elements cannot be added or removed. Calling any mutator method will always cause `UnsupportedOperationException` to be thrown
+### Java 13 
 
-* **No null Element Allowed**: Attempts to create them with null elements result in `NullPointerException`. In the case of List and Set, no elements can be null. In the case of a Map, neither keys nor values can be null.
+* [Pattern matching with *switch*](./partter-matching.md)
 
-* **Value-Based Instances**: If we create Lists with the same values, they may or may not refer to the same object on the heap.
-
-* **Serialization**:  They are serializable if all elements are serializable.
-
-* **Iteration Order**: The iteration order of elements is unspecified and is subject to change.
-
-## JShell
-
-Unlike Ruby, Python, and other JVM language, such as Groovy, Java itself lacks an interactive shell for a long time. Some 3rd party projects tried to fill the blank, such as Apache Bean Shell. Java 9 brings a built-in shell.
-
-Open your terminal(cmd under Windows or Gnome Terminal under Linux/Gnome) and type `jshell`(make sure it is in your PATH environment variable or use the full path) to start up JShell console.
-
-```
-#jshell
-|  Welcome to JShell -- Version 9
-|  For an introduction type: /help intro
-
-jshell>
-```
-
-It shows the welcome info.
-
-Type `/help intro` to get a simple introduction to JShell.
-
-```
-jshell> /help intro
-|
-|  intro
-|
-|  The jshell tool allows you to execute Java code, getting immediate results.
-|  You can enter a Java definition (variable, method, class, etc), like:  int x = 8
-|  or a Java expression, like:  x + x
-|  or a Java statement or import.
-|  These little chunks of Java code are called 'snippets'.
-|
-|  There are also jshell commands that allow you to understand and
-|  control what you are doing, like:  /list
-|
-|  For a list of commands: /help
-```
-
-Type `/help` to get the all help info of `jshell`.
-
-Try add some code pieces to taste Java language features.
-
-```
-jshell> int i=1+1;
-i ==> 2
-
-jshell>
-
-jshell> System.out.println(i);
-2
-
-```
-
-Test the new ImmutableCollections features we have dicussed in the last section.
-
-```
-jshell> import java.util.*;
-
-jshell> Set.of("One", "Two", "Three", "Four");
-$4 ==> [Four, One, Three, Two]
-
-jshell> System.out.println("set ::" + $4);
-set ::[Four, One, Three, Two]
-
-jshell> $4.add("Five");
-|  java.lang.UnsupportedOperationException thrown:
-|        at ImmutableCollections.uoe (ImmutableCollections.java:70)
-|        at ImmutableCollections$AbstractImmutableSet.add (ImmutableCollections.java:280)
-|        at (#6:1)
-
-jshell> $4.remove("One");
-|  java.lang.UnsupportedOperationException thrown:
-|        at ImmutableCollections.uoe (ImmutableCollections.java:70)
-|        at ImmutableCollections$AbstractImmutableSet.remove (ImmutableCollections.java:283)
-|        at (#7:1)
-jshell> Set<String> set= $4;
-set ==> [Four, One, Three, Two]
-
-jshell> set.add(null);
-|  java.lang.UnsupportedOperationException thrown:
-|        at ImmutableCollections.uoe (ImmutableCollections.java:70)
-|        at ImmutableCollections$AbstractImmutableSet.add (ImmutableCollections.java:280)
-|        at (#10:1)
-```
-
-As you see, the created collections do not allow to add or remove items.
-
-```
-jshell> /vars
-|    int i = 2
-|    Set<String> $4 = [Four, One, Three, Two]
-|    boolean $6 = false
-|    boolean $7 = false
-|    boolean $8 = false
-|    Set<String> set = [Four, One, Three, Two]
-|    boolean $10 = false
-```
-
-Every step JShell creates a variable to mark it, if you do not define an explicit variable, it will assign one for you. You can refer any defined before in your current code snippets.
-
-```
-jshell> /exit
-|  Goodbye
-```
-
-Type `/exit` to quit JShell console.
+*  [Text block](./text-block.md)
 
 ## References
 
-* [Immutable Collections in Java 9 ](https://dzone.com/articles/immutable-collections-in-java-9), DZone
-* [Process Handling in Java 9 ](https://dzone.com/articles/process-handling-in-java-9), DZone
-* [Immutable Collections Explained](https://github.com/google/guava/wiki/ImmutableCollectionsExplained), Google Guava Github Wiki
-* [What is new in JDK 9](https://www.quora.com/What-is-new-in-JDK-9), Quora
-* [55 New Features in JDK 9 by Simon Ritter](https://goo.gl/d2F7rH), Devoxx Session
-* [Painlessly Migrating to Java Jigsaw Modules - a Case Study](https://www.infoq.com/articles/Java-Jigsaw-Migration-Guide)
-* [Java 9 and Intellij IDEA](https://dzone.com/articles/java-9-and-intellij-idea)
-* [Java Magazine: Sept/Oct 2017](http://www.javamagazine.mozaicreader.com/SeptOct2017#&pageSet=0&page=0&contentItem=0)
-* [Java 9: The Good, the Bad, and Private Interface Methods ](https://dzone.com/articles/java-9-the-good-the-bad-and-private-interface-meth)
+### Java 9
+
+- [Immutable Collections in Java 9 ](https://dzone.com/articles/immutable-collections-in-java-9), DZone
+- [Process Handling in Java 9 ](https://dzone.com/articles/process-handling-in-java-9), DZone
+- [Immutable Collections Explained](https://github.com/google/guava/wiki/ImmutableCollectionsExplained), Google Guava Github Wiki
+- [What is new in JDK 9](https://www.quora.com/What-is-new-in-JDK-9), Quora
+- [55 New Features in JDK 9 by Simon Ritter](https://goo.gl/d2F7rH), Devoxx Session
+- [Painlessly Migrating to Java Jigsaw Modules - a Case Study](https://www.infoq.com/articles/Java-Jigsaw-Migration-Guide)
+- [Java 9 and Intellij IDEA](https://dzone.com/articles/java-9-and-intellij-idea)
+- [Java Magazine: Sept/Oct 2017](http://www.javamagazine.mozaicreader.com/SeptOct2017#&pageSet=0&page=0&contentItem=0)
+- [Java 9: The Good, the Bad, and Private Interface Methods ](https://dzone.com/articles/java-9-the-good-the-bad-and-private-interface-meth)
+
+### Java 13
+
+* [Oracle blog: the arrival of Java 13](https://blogs.oracle.com/java-platform-group/the-arrival-of-java-13)
+
+* [81 New Features and APIs in JDK 13 ](https://dzone.com/articles/81-new-features-and-apis-in-jdk-13)
+
+* [DZone Refcard #318: Java 13](https://dzone.com/refcardz/java-13-1?chapter=1)
+
+* [Programmer's Guide To Text Blocks](http://cr.openjdk.java.net/~jlaskey/Strings/TextBlocksGuide_v9.html) 
+* [Definitive Guide To Switch Expressions In Java 13](https://blog.codefx.org/java/switch-expressions/)

@@ -8,7 +8,6 @@ public class PatternMatchingExample {
         R, G, B
     }
 
-
     public static void printColor(Color c) {
         String out;
         switch (c) {
@@ -60,6 +59,25 @@ public class PatternMatchingExample {
 
         System.out.println("today is " + out);
     }
+
+
+/*
+
+    class Animal{}
+    class Cat extends Animal{}
+    class Dog extends Animal{}
+
+    public static void printAnimal() {
+       System.out.println("This animal is:");
+        Animal cat = new Cat();
+        switch (cat) {
+            case Cat -> System.out.println("cat");
+            case Dog -> System.out.println("dog");
+            default -> throw new IllegalStateException("unknown");
+        };
+    }
+
+ */
 
     public static final void main(String[] args) {
 

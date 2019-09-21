@@ -64,7 +64,7 @@ public static void printColorPatternMatching(Color c) {
 }
 ```
 
-And the case conditions can be grouped into  one case if the handling clause is same.
+And the case conditions can be grouped into  one case if the handling clause has no difference.
 
 ```java
 public static void printDayOfWeek() {

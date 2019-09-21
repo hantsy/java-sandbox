@@ -45,7 +45,7 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 
 ### Java 13 
 
-* [Pattern matching with *switch*](./partter-matching.md)
+* [Pattern matching with *switch*](./pattern-matching.md)
 
 *  [Text block](./text-block.md)
 

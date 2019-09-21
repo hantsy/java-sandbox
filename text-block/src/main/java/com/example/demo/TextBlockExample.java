@@ -68,6 +68,19 @@ public class TextBlockExample {
         System.out.println("hello2 after stripIntent():\n" + hello2.stripIndent());
         System.out.println("hello is equals hello2 after stripIndent():" + hello.stripIndent().equals(hello2.stripIndent()));
 
+        String hello3 = """
+            Hello,
+            Java 13""";
+
+        System.out.println("hello3:\n" + hello3);
+
+        System.out.println("hello is equals hello3:" + hello.equals(hello3));
+        System.out.println("hello3 after stripIntent():\n" + hello3.stripIndent());
+        System.out.println("hello.replace(\" \",\".\").replace(\"\\n\",\"@\"):\n" + hello.replace(" ",".").replace("\n","@"));
+        System.out.println("hello3.replace(\" \",\".\").replace(\"\\n\",\"@\"):\n" + hello3.replace(" ",".").replace("\n","@"));
+        System.out.println("hello is equals hello3 after stripIndent():" + hello.stripIndent().equals(hello3.stripIndent()));
+
+        System.out.println("hello is equals hello3 after trim():" + hello.trim().equals(hello3.trim()));
 
         String product = """
              {
@@ -78,16 +91,16 @@ public class TextBlockExample {
 
         System.out.println("product formatted: \n " + product);
 
-        String  hasNewLine = "select * from User \\nwhere id = 1";
-        System.out.println("string before translateEscapes():\n"+ hasNewLine);
+        String hasNewLine = "select * from User \\nwhere id = 1";
+        System.out.println("string before translateEscapes():\n" + hasNewLine);
         String translated = hasNewLine.translateEscapes();
-        System.out.println("string after translateEscapes():\n"+ translated);
+        System.out.println("string after translateEscapes():\n" + translated);
 
 
-        String s="  there are 2 spaces in the front of line one\n    the second line begins with 4 spaces and ends with an escaped new line\\n      the third line has 6 spaces at the beginning";
-        System.out.println("original string :\n"+ s);
-        System.out.println("original string after stripIntent :\n"+ s.stripIndent());
-        System.out.println("original string after translateEscapes :\n"+ s.translateEscapes());
-        System.out.println("original string after stripIntent and translateEscapes :\n"+ s.stripIndent().translateEscapes());
+        String s = "  there are 2 spaces in the front of line one\n    the second line begins with 4 spaces and ends with an escaped new line\\n      the third line has 6 spaces at the beginning";
+        System.out.println("original string :\n" + s);
+        System.out.println("original string after stripIntent :\n" + s.stripIndent());
+        System.out.println("original string after translateEscapes :\n" + s.translateEscapes());
+        System.out.println("original string after stripIntent and translateEscapes :\n" + s.stripIndent().translateEscapes());
     }
 }

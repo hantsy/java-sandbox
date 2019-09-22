@@ -48,7 +48,7 @@ public static void printColorYield(Color c) {
 }
 ```
 
-In the above codes, `switch` is an **expression**, the return value is assigned to a variable `out`, and every `case`, use a `yield`  clause to return the value. 
+In the above codes, `switch` is an **expression**, the return value is assigned to a variable `out`, and every `case`, use a `yield`  clause to return the value directly thus avoid some issues  caused by forgetting `break`. 
 
 More simply,  the `case` accept an lambda expression now. 
 

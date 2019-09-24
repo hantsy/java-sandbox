@@ -39,11 +39,16 @@ public class TextBlockExample {
 
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("js");
         Object result = engine.eval("""
-                            function add(int1, int2) {
-                            return int1 + int2;
+                            function hello(name) {
+                            return "Hello, " + name;
                             }
-                            add(1, 2);""");
+                            hello("Java 13");""");
         System.out.println("function add result is:" + result);
+
+        String escapesLine = """
+            Hello, \n Java 13
+            """;
+        System.out.println("Escaped string line delimiter:\n" + escapesLine);
 
         String escapes = """
             Hello, \""" Java 13

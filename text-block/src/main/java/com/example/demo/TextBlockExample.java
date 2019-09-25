@@ -107,5 +107,6 @@ public class TextBlockExample {
         System.out.println("original string after stripIntent :\n" + s.stripIndent());
         System.out.println("original string after translateEscapes :\n" + s.translateEscapes());
         System.out.println("original string after stripIntent and translateEscapes :\n" + s.stripIndent().translateEscapes());
+        System.out.println("original string after translateEscapes and stripIntent:\n" + s.translateEscapes().stripIndent());
     }
 }

@@ -127,7 +127,7 @@ String hello = """
 ............""";
 ```
 
-After is processed by Java compiler, the content of the string should be truncated as:
+After it's processed by Java compiler, the content of the string should be truncated as:
 
 ```java
 Hello,
@@ -135,7 +135,7 @@ Java 13
 <new line delimiter> 
 ```
 
-Another example ,  we change the closing delimiter position,
+Another example ,  we change the position of the closing delimiter,
 
 ```java
 String hello2 = """
@@ -161,7 +161,7 @@ Finally the text block should be processed like:
 <new line delimiter> 
 ```
 
-Let's  the third example ,  the closing delimiter is not placed in a new line. 
+Let's move to the third example ,  the closing delimiter is located at the end of the content,  not placed in a new line. 
 
 ```java
 String hello3 = """
@@ -178,7 +178,7 @@ String hello3 = """
 
 ```
 
-And the content of hello3 is :
+And finally the the compiled `hello3` should be :
 
 ```java
 Hello,
@@ -186,3 +186,99 @@ Java 13
 ```
 
 The `hello`, `hello2` and `hello3` are similar, but they are different strings.
+
+If the closing delimiter  takes up a new line, the white spaces before it will be taken in account when calculating  incidental white spaces. 
+
+Calling `stripIntent` on the above text blocks does not effect the content. 
+
+```java
+    Hello, // it does not remove white spaces.
+    Java 13
+<new line delimiter> 
+```
+
+Let's  have a look at the javadoc of [`String#stripIndent`](https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html#stripIndent()).
+
+> Returns a string whose value is this string, with **incidental white space** removed from the beginning and end of every line.
+>
+> Then, **the minimum indentation** (min) is determined as follows. For each non-blank line (as defined by [`isBlank()`](https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html#isBlank())), the leading white space characters are counted. **The leading white space characters on the last line are also counted even if blank.** The min value is the smallest of these counts.
+>
+> For each non-blank line, min leading white space characters are  removed, and any trailing white space characters are removed. Blank  lines are replaced with the empty string.
+
+[`String#stripIndent`](https://docs.oracle.com/en/java/javase/13/docs/api/java.base/java/lang/String.html#stripIndent()) gives developers access to a Java version of the re-indentation algorithm used by the compiler.
+
+
+> ## [JEP 355](https://openjdk.java.net/jeps/355)
+>
+> The re-indentation algorithm will be normative in The Java Language Specification. Developers will have access to it via `String::stripIndent`, a new instance method.
+>
+> ## [Specification for JEP 355](https://docs.oracle.com/javase/specs/jls/se13/preview/text-blocks.html)
+>
+> The string represented by a text block is not the literal sequence  of characters in the content. Instead, the string represented by a text  block is the result of applying the following transformations to the  content, in order:
+>
+> 1. Line terminators are normalized to the ASCII LF character (...)
+> 2. Incidental white space is removed, **as if by execution of String::stripIndent** on the characters in the content.
+> 3. Escape sequences are interpreted, as in a string literal.
+> 
+
+Besides `stripIntent`, there are  a `formatted` and `translateEscapes` method added in String class.
+
+The following is an example of `formatted`.
+
+```
+String product = """
+    {
+        "name":"%s",
+        "price":%.2f
+    }
+    """.formatted("Java 8 in action", 39.3444);
+
+System.out.println("product formatted: \n " + product);
+```
+
+The output result looks like:
+
+```java
+product formatted: 
+ {
+   "name":"Java 8 in action",
+   "price":39.34
+}
+```
+
+You can also use `String.format` to format it like the string literal.
+
+ An example calling `stripIntent` and `translateEscapes` on String.
+
+```java
+String s = "  there are 2 spaces in the front of line one\n    the second line begins with 4 spaces and ends with an escaped new line\\n      the third line has 6 spaces at the beginning";
+System.out.println("original string :\n" + s);
+System.out.println("original string after stripIntent :\n" + s.stripIndent());
+System.out.println("original string after translateEscapes :\n" + s.translateEscapes());
+System.out.println("original string after stripIntent and translateEscapes :\n" + s.stripIndent().translateEscapes());
+System.out.println("original string after translateEscapes and stripIntent:\n" + s.translateEscapes().stripIndent());
+```
+
+The output is :
+
+```java
+original string :
+  there are 2 spaces in the front of line one 
+    the second line begins with 4 spaces and ends with an escaped new line\n      the third line has 6 spaces at the beginning
+original string after stripIntent :
+there are 2 spaces in the front of line one
+  the second line begins with 4 spaces and ends with an escaped new line\n      the third line has 6 spaces at the beginning
+original string after translateEscapes :
+  there are 2 spaces in the front of line one
+    the second line begins with 4 spaces and ends with an escaped new line
+      the third line has 6 spaces at the beginning
+original string after stripIntent and translateEscapes :
+there are 2 spaces in the front of line one
+..the second line begins with 4 spaces and ends with an escaped new line
+......the third line has 6 spaces at the beginning //there are 6 white spaces at the beginning
+original string after translateEscapes and stripIntent:      
+there are 2 spaces in the front of line one
+..the second line begins with 4 spaces and ends with an escaped new line
+....the third line has 6 spaces at the beginning  //there are 4 white spaces at the beginning    
+```
+

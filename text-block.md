@@ -221,6 +221,8 @@ Let's  have a look at the javadoc of [`String#stripIndent`](https://docs.oracle.
 > 3. Escape sequences are interpreted, as in a string literal.
 > 
 
+More about `stripIntent` , see  [this question on stackoverflow](https://stackoverflow.com/questions/58030419/how-the-intents-processed-in-a-text-blockjava-13).
+
 Besides `stripIntent`, there are  a `formatted` and `translateEscapes` method added in String class.
 
 The following is an example of `formatted`.
@@ -259,19 +261,19 @@ System.out.println("original string after stripIntent and translateEscapes :\n" 
 System.out.println("original string after translateEscapes and stripIntent:\n" + s.translateEscapes().stripIndent());
 ```
 
-The output is :
+The following is the output result, the white spaces are visualized by dots.
 
 ```java
 original string :
-  there are 2 spaces in the front of line one 
-    the second line begins with 4 spaces and ends with an escaped new line\n      the third line has 6 spaces at the beginning
+..there are 2 spaces in the front of line one 
+....the second line begins with 4 spaces and ends with an escaped new line\n      the third line has 6 spaces at the beginning
 original string after stripIntent :
 there are 2 spaces in the front of line one
-  the second line begins with 4 spaces and ends with an escaped new line\n      the third line has 6 spaces at the beginning
+..the second line begins with 4 spaces and ends with an escaped new line\n      the third line has 6 spaces at the beginning
 original string after translateEscapes :
-  there are 2 spaces in the front of line one
-    the second line begins with 4 spaces and ends with an escaped new line
-      the third line has 6 spaces at the beginning
+..there are 2 spaces in the front of line one
+....the second line begins with 4 spaces and ends with an escaped new line
+......the third line has 6 spaces at the beginning
 original string after stripIntent and translateEscapes :
 there are 2 spaces in the front of line one
 ..the second line begins with 4 spaces and ends with an escaped new line

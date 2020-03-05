@@ -2,7 +2,7 @@ package com.example.demo;
 
 import java.time.LocalDate;
 
-public class PatternMatchingExample {
+public class SwitchPatternMatchingExample {
 
     static enum Color {
         R, G, B

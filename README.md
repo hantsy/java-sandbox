@@ -66,12 +66,16 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 ### Java 13
 
 * [Oracle blog: the arrival of Java 13](https://blogs.oracle.com/java-platform-group/the-arrival-of-java-13)
-
 * [81 New Features and APIs in JDK 13 ](https://dzone.com/articles/81-new-features-and-apis-in-jdk-13)
-
 * [DZone Refcard #318: Java 13](https://dzone.com/refcardz/java-13-1?chapter=1)
-
 * [Programmer's Guide To Text Blocks](http://cr.openjdk.java.net/~jlaskey/Strings/TextBlocksGuide_v9.html) 
 * [Definitive Guide To Switch Expressions In Java 13](https://blog.codefx.org/java/switch-expressions/)
 * [Java 13 – a deep dive into the JDK’s new features](https://jaxenter.com/java-13-jdk-deep-dive-new-features-162272.html), JAXcenter
 * [Java 13 – why text blocks are worth the wait](https://jaxenter.com/java-13-text-blocks-162278.html), JAXcenter 
+
+### Java 14
+
+* [Records come to Java](https://blogs.oracle.com/javamagazine/records-come-to-java)
+* [Java 14 Arrives with a Host of New Features](https://blogs.oracle.com/javamagazine/java-14-arrives-with-a-host-of-new-features)
+* [Java 14 Feature Spotlight: Records ](https://www.infoq.com/articles/java-14-feature-spotlight/)
+* [JEP 359: Records (Preview)](https://openjdk.java.net/jeps/359)

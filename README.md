@@ -4,19 +4,19 @@ This is a personal sandbox to keep up with the latest Java language features tha
 
 
 
-## Getting JDK 
+## Getting the latest JDK 
 
 You can download a copy of JDK  redistribution from the following website for development purpose. 
 
-* OpenJDK, https://openjdk.java.net
-* Oracle JDK, https://java.oracle.com
-* AdoptOpenJDK, https://adoptopenjdk.net/
+* [OpenJDK]( https://openjdk.java.net)
+* [Oracle JDK]( https://java.oracle.com)
+* [AdoptOpenJDK]( https://adoptopenjdk.net/)
 
-* Azul JDK, https://www.azul.com/downloads/zulu-community/
+* [Azul JDK](https://www.azul.com/downloads/zulu-community/)
 
 Additionally, IBM, Amazon, Alibaba, Microsoft, RedHat  have maintained their own Java redistributions.  
 
-## Notes
+## Docs
 
 ### Java 8(LTS)
 

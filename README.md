@@ -46,8 +46,13 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 ### Java 13 
 
 * [Pattern matching with *switch*](./pattern-matching.md)
+* [Text block](./text-block.md)
 
-*  [Text block](./text-block.md)
+### Java 14
+
+* [Instanceof Pattern Matching](./instanceof-pattern-matching.md)
+* [Helpful NPE Exception Messages](./helpful-npe.md)
+* [Record](./record.md)
 
 ## References
 

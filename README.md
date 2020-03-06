@@ -53,6 +53,7 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 * [Instanceof Pattern Matching](./docs/instanceof-pattern-matching.md)
 * [Helpful NPE Exception Messages](./docs/helpful-npe.md)
 * [Record](./docs/record.md)
+* [Small improvements in Text Block](./java14-text-block-improvement.md)
 
 ## References
 

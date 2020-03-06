@@ -90,16 +90,20 @@ public class TextBlockExample {
     // added in java 14
     private static void printNewLineDelimiter() {
         String noNewlines = """
-                Hello,           
-                        Java 14! 
-                        """;
-        System.out.println("No line delimiters at the end of every lines:\n" + noNewlines.replaceAll(" ", ".").replaceAll("\\n", "@"));
+                mvn archetype:generate -DgroupId=com.example
+                              	-DartifactId=demo
+                               	-DarchetypeArtifactId=maven-archetype-webapp
+                              	-DinteractiveMode=false
+                            """;
+        System.out.println("No line delimiters at the end of every lines:\n" + noNewlines.replaceAll(" ", "."));
         
         String newlines = """
-                Hello,            \
-                        Java 14!  \
-                        """;
-        System.out.println("New line delimiters added at the end of every lines:\n" + newlines.replaceAll(" ", ".").replaceAll("\\n", "@"));
+                mvn archetype:generate -DgroupId=com.example                 \
+                        	-DartifactId=demo                            \
+                        	-DarchetypeArtifactId=maven-archetype-webapp \
+                        	-DinteractiveMode=false                      \
+                            """;
+        System.out.println("New line delimiters added at the end of every lines:\n" + newlines.replaceAll(" ", "."));
 
     }
 

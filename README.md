@@ -26,8 +26,8 @@ Additionally, IBM, Amazon, Alibaba, Microsoft, RedHat  have maintained their own
 
 The long-waiting Java 9 adds plenty of new features, including the controversial Java Platform Module System, the new Flow API(as Java built-in Reactive Stream implementation), and numerous language improvements.
 
-* [JShell](./jshell.md) 
-* [Immutable Collections](./immutable-collections.md)
+* [JShell](./docs/jshell.md) 
+* [Immutable Collections](./docs/immutable-collections.md)
 * Java Module System
 * Java Flow  API - The ReactiveStream adopting
 
@@ -45,14 +45,14 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 
 ### Java 13 
 
-* [Pattern matching with *switch*](./pattern-matching.md)
-* [Text block](./text-block.md)
+* [Pattern matching with *switch*](./docs/pattern-matching.md)
+* [Text block](./docs/text-block.md)
 
 ### Java 14
 
-* [Instanceof Pattern Matching](./instanceof-pattern-matching.md)
-* [Helpful NPE Exception Messages](./helpful-npe.md)
-* [Record](./record.md)
+* [Instanceof Pattern Matching](./docs/instanceof-pattern-matching.md)
+* [Helpful NPE Exception Messages](./docs/helpful-npe.md)
+* [Record](./docs/record.md)
 
 ## References
 

@@ -8,7 +8,7 @@
     <artifactId>record</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-<!--        <maven.compiler.release>13</maven.compiler.release>-->
+        <maven.compiler.release>14</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
@@ -18,9 +18,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <release>14</release>
+                    <fork>true</fork>
                     <compilerArgs>
-                        <arg>--enable-preview</arg>
+                        <arg>--enable-preview</arg>             
                     </compilerArgs>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>

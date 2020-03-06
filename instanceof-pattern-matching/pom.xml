@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>pattern-matching</artifactId>
+    <artifactId>instanceof-pattern-matching</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-<!--        <maven.compiler.release>13</maven.compiler.release>-->
+        <maven.compiler.release>14</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
@@ -18,9 +18,9 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <release>14</release>
+                    <fork>true</fork>
                     <compilerArgs>
-                        <arg>--enable-preview</arg>
+                        <arg>--enable-preview</arg>             
                     </compilerArgs>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
@@ -28,12 +28,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.4.3</version>
+                <version>3.1.0</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <name>pattern-matching</name>
+    <name>instanceof-pattern-matching</name>
 </project>

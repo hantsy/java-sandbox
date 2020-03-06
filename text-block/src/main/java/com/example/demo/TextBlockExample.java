@@ -115,10 +115,10 @@ public class TextBlockExample {
         System.out.println("Escaped string:\n" + escapes);
 
         String whitespaceEscapes = """
-                                    Hello,\s Java 14
+                                \s Hello,\s Java 14!\s
                                    """;
 
-        System.out.println("Escaped whitespaces by a \\s char in Java 14:\n" + whitespaceEscapes);
+        System.out.println("Escaped whitespaces by a \\s char in Java 14:\n" + whitespaceEscapes.replaceAll(" ", "."));
     }
 
     private static void printScripts() throws ScriptException {

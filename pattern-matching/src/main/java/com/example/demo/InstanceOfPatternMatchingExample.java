@@ -19,7 +19,7 @@ public class InstanceOfPatternMatchingExample {
         System.out.println("Before Java 14:");
         Animal animal = new Cat();
         if(animal instanceof Cat){
-            Cat cat= (Cat) cat;
+            Cat cat = (Cat) cat;
             System.out.println("it is a cat:" +cat.name());
         }
     }

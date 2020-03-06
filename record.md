@@ -1,8 +1,8 @@
 # Record
 
-Java 14 introduce a new keyword `record`  to bring a Kotlin `data class` like feature in Java.
+Java 14 introduce a new keyword `record`  to bring Kotlin `data class` like feature in Java.
 
-Before Java 14, a simple POJO  could like this.
+Before Java 14, a simple POJO for storing data could like this.
 
 ```java
 class Person {
@@ -113,17 +113,32 @@ System.out.println("Person.equals in Java 14:\n" + person14Copy.equals(person14)
 ```
 
 
-> Use an extra `--enable-preview` parameter to compile and run this application.
+> You should use an extra `--enable-preview` parameter to compile and run this application.
 
-There are some limitations of a `record` class.  A `record` class is implicitly extending from `java.lang.Record`, and it can not be extended by others. And all fields in a `record`  imply `final`, that means once the instance is initialized, they can not be changed.
+There are some limitations in  a `record` class.  
 
-Use `javap` to decompile  the class file, as you it is declared as `final` and extends from `java.lang.Record`.
+* A `record` class can not extend other classes.
+* And it can not be inherited by other classes. 
+* And all fields in a `record`  imply `final`, that means once a `record` is instantiated, all fields can not be changed.
+
+Use `javap` to decompile the *RecordPerson.class*  file.  
 
 ```java
 
-public final class RecordPersonextends Record {
-   public final String name;
-   public final int age;
-   ...
+#javap  com.example.demo.RecordPerson
+Compiled from "RecordPerson.java"
+public final class com.example.demo.RecordPerson extends java.lang.Record {
+  public com.example.demo.RecordPerson(java.lang.String, int);
+  public com.example.demo.RecordPerson(java.lang.String);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String name();
+  public int age();
+}
    
 ```
+
+As you see it is declared as `final` and extends `java.lang.Record`.
+
+A `record` class is  useful to transfer data between layers in multi-layered enterprise applications, aka  it a good match with the DTO(Data Transfer Object) pattern.  

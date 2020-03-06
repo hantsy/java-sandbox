@@ -40,21 +40,21 @@ When creating a `Cat` like this.
 Animal animal = new Cat();
 ```
 
-And we want to detect if it is a  `Cat`,  in the preivious Java, we could have to code like this.
+And we want to check if it is a  `Cat`,  in the previous Java, we could have to code like this.
 
 ```java
 if(animal instanceof Cat){
-    Cat cat= (Cat) cat;
+    Cat cat = (Cat) cat;
     System.out.println("it is a cat:" + cat.name());
 }
 ```
 
-Here we used a line of code to cast  the `animal` object instance to type `Cat`.
+Here we used a line of codes to cast  the `animal` instance to `Cat` type .
 
-In Java 14, it smply becomes:
+In Java 14, it simply becomes:
 
 ```java
 if(animal instanceof Cat cat){
 	System.out.println("it is a cat:" + cat.name());
 }
-```        
+```

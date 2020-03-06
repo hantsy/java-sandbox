@@ -2,7 +2,7 @@
 
 
 
-Assume we have the classes. 
+Assume we have the following classes. 
 
 ```java
 class Person {
@@ -86,16 +86,16 @@ When you try to access the address of the `person` object.
 person.getAddress().getCity().getName()
 ```
 
-Compile and run the codes, you will encounter the famous `NullPointerException`.
+Compile the application. And run it, you will see the famous `NullPointerException`.
 
 ```bash
 Exception in thread "main" java.lang.NullPointerException
         at com.example.demo.NpeExample.main(NpeExample.java:12)
 ```
 
-But this messages do not indicate where causes this exception.  The `person.getAddress()` or `person.getAddress().getCity()` could cause this exception.
+But the above message does not indicate where causes the exception.  Either `person.getAddress()` or `person.getAddress().getCity()` could raise this exception.
 
-In Java 14, add an extra JVM parameter `-XX:+ShowCodeDetailsInExceptionMessages` to run the application. You will get detailed messages about the `java.lang.NullPointerException`.
+In Java 14, add an extra parameter `-XX:+ShowCodeDetailsInExceptionMessages ` to `java` when running the application, you will get detailed messages about the `java.lang.NullPointerException`.
 
 ```bash
 #java -XX:+ShowCodeDetailsInExceptionMessages --enable-preview com.example.demo.NpeExample
@@ -103,9 +103,9 @@ In Java 14, add an extra JVM parameter `-XX:+ShowCodeDetailsInExceptionMessages`
 Exception in thread "main" java.lang.NullPointerException: Cannot invoke "com.example.demo.Address.getCity()" because the return value of "com.example.demo.Person.getAddress()" is null
         at com.example.demo.NpeExample.main(NpeExample.java:12)
 ```
-It is very helpful when you are analyzing your application.
+It is very helpful when you are debugging your application.
 
-        
+​        
 
 
 

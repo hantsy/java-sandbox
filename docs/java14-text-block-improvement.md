@@ -21,7 +21,7 @@ Escaped whitespaces by a \s char in Java 14:
 ..Hello,..Java.14!.
 ```
 
-It inserted a white spaces at the beginning and ending of this line which changed the incident characters  handling.
+It inserted white spaces at the beginning and ending of this line which changed the incident characters  processing.
 
 Second, you can use a backslash, `\`, as a way to suppress the insertion of a new line character at the end  of a line. This is helpful when you have a very long line that you want  to split up for ease of readability inside a text block.
 
@@ -46,7 +46,7 @@ String newlines = """
 
 ```
 
-It will print the following result. The second result is a long string without new line breaks.
+It will print the following result. Compared the result of the two samples, the second result is a long **single-line** string without new line breaks.
 
 ```bash
 mvn.archetype:generate.-DgroupId=com.example

@@ -69,9 +69,13 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 - [Java Magazine: Sept/Oct 2017](http://www.javamagazine.mozaicreader.com/SeptOct2017#&pageSet=0&page=0&contentItem=0)
 - [Java 9: The Good, the Bad, and Private Interface Methods ](https://dzone.com/articles/java-9-the-good-the-bad-and-private-interface-meth)
 
-### Java 13
+### Java 12
+* [New switch Expressions in Java 12](https://blogs.oracle.com/javamagazine/new-switch-expressions-in-java-12)
 
+### Java 13
+* [Inside Java 13’s switch Expressions and Reimplemented Socket API](https://blogs.oracle.com/javamagazine/inside-java-13s-switch-expressions-and-reimplemented-socket-api)
 * [Oracle blog: the arrival of Java 13](https://blogs.oracle.com/java-platform-group/the-arrival-of-java-13)
+* [Text Blocks Come to Java](https://blogs.oracle.com/javamagazine/text-blocks-come-to-java)
 * [81 New Features and APIs in JDK 13 ](https://dzone.com/articles/81-new-features-and-apis-in-jdk-13)
 * [DZone Refcard #318: Java 13](https://dzone.com/refcardz/java-13-1?chapter=1)
 * [Programmer's Guide To Text Blocks](http://cr.openjdk.java.net/~jlaskey/Strings/TextBlocksGuide_v9.html) 

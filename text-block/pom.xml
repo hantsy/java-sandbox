@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>text-block</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
 <!--        <maven.compiler.release>13</maven.compiler.release>-->
@@ -26,5 +26,5 @@
             </plugin>
         </plugins>
     </build>
-
+    <name>text-block</name>
 </project>

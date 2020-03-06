@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>pattern-matching</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
 <!--        <maven.compiler.release>13</maven.compiler.release>-->
@@ -20,11 +20,10 @@
                     <release>14</release>
                     <compilerArgs>
                         <arg>--enable-preview</arg>
-                        <compilerArg>--enable-preview</compilerArg>
                     </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
+    <name>pattern-matching</name>
 </project>

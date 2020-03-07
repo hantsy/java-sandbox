@@ -53,7 +53,7 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 * [Instanceof Pattern Matching](./docs/instanceof-pattern-matching.md)
 * [Helpful NPE Exception Messages](./docs/helpful-npe.md)
 * [Record](./docs/record.md)
-* [Small improvements in Text Block](./java14-text-block-improvement.md)
+* [Small improvements in Text Block](./docs/java14-text-block-improvement.md)
 
 ## References
 
@@ -89,3 +89,4 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 * [Java 14 Arrives with a Host of New Features](https://blogs.oracle.com/javamagazine/java-14-arrives-with-a-host-of-new-features)
 * [Java 14 Feature Spotlight: Records ](https://www.infoq.com/articles/java-14-feature-spotlight/)
 * [JEP 359: Records (Preview)](https://openjdk.java.net/jeps/359)
+* [Java 14: instanceOf Pattern Matching](https://javabeginnerstutorial.com/core-java-tutorial/java-14-instanceof-pattern-matching/)

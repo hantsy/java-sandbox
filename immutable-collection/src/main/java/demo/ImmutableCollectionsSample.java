@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hantsylab.java9hacks;
+package demo;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -34,11 +34,11 @@ public class ImmutableCollectionsSample {
         //java 5        
         Set<String> units = new HashSet<>(Arrays.asList("One", "Two", "Three", "Four"));
         units = Collections.unmodifiableSet(units);
-        
+
         //java 8
         Stream.of("One", "Two", "Three", "Four")
                 .collect(collectingAndThen(toSet(), Collections::unmodifiableSet));
-        
+
         // java 9
         Set<String> set = Set.of("One", "Two", "Three", "Four");
 
@@ -51,6 +51,11 @@ public class ImmutableCollectionsSample {
         Map<Integer, String> map = Map.of(1, "One", 2, "Two", 3, "Three", 4, "Four");
 
         System.out.println("map::" + map);
+
+        Set.of("one", null);//throw java.lang.NullPointerException
+        List.of("one", "two", null);//throw java.lang.NullPointerException
+        Map.of(1, "One", 2, "Two", null, "Three");//throw java.lang.NullPointerException
+        Map.of(1, "One", 2, "Two", 3, null);//throw java.lang.NullPointerException
 
     }
 

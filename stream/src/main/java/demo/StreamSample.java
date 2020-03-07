@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hantsylab.java9hacks;
+package demo;
 
 import java.util.Map;
 import java.util.stream.Stream;
@@ -15,6 +15,8 @@ import java.util.stream.Stream;
 public class StreamSample {
 
     public static final void main(String[] args) {
+        
+        //Java 9
         Stream.of("hello", "java 9", "stream")
                 .takeWhile(s -> s.contains("h"))
                 .forEach(System.out::println);

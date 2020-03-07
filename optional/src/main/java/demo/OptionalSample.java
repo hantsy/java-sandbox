@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hantsylab.java9hacks;
+package demo;
 
 import java.util.Optional;
 import java.util.stream.IntStream;
@@ -15,6 +15,8 @@ import java.util.stream.IntStream;
 public class OptionalSample {
 
     public static final void main(String[] args) {
+        
+        //java 9
         String optional = Optional.<String>empty().or(() -> Optional.of("alternatives")).get();
         System.out.println("Optional is empty or alternatives:" + optional);
 

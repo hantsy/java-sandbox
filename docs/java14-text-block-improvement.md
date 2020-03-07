@@ -25,7 +25,9 @@ It inserted white spaces at the beginning and ending of this line which changed 
 
 Second, you can use a backslash, `\`, as a way to suppress the insertion of a new line character at the end  of a line. This is helpful when you have a very long line that you want  to split up for ease of readability inside a text block.
 
-The the processing is similar with the bash multi lines command.  To input a long command like this in the Linux terminal, you could break the a long literal in multi lines by appending  a  `\`  at the ending of  every lines. It will result in a long single-line based string finally.
+The processing is similar with the  multi lines command in `bash` shell.  To input a long command  in the Linux terminal, you can break it into multi lines by appending  a  `\`  at the ending of  every lines. The result is equivalent to a long single-line based string .
+
+Let's have a look at an example.
 
 ```java
 String noNewlines = """

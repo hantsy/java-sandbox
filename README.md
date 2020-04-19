@@ -3,7 +3,6 @@
 This is a personal sandbox to keep up with the latest Java language features that introduced in Java 8 and later.  
 
 
-
 ## Getting the latest JDK 
 
 You can download a copy of JDK  redistribution from the following website for development purpose. 
@@ -11,7 +10,6 @@ You can download a copy of JDK  redistribution from the following website for de
 * [OpenJDK]( https://openjdk.java.net)
 * [Oracle JDK]( https://java.oracle.com)
 * [AdoptOpenJDK]( https://adoptopenjdk.net/)
-
 * [Azul JDK](https://www.azul.com/downloads/zulu-community/)
 
 Additionally, IBM, Amazon, Alibaba, Microsoft, RedHat  have maintained their own Java redistributions.  
@@ -24,7 +22,7 @@ Additionally, IBM, Amazon, Alibaba, Microsoft, RedHat  have maintained their own
 
 ### Java 9
 
-The long-waiting Java 9 adds plenty of new features, including the controversial Java Platform Module System, the new Flow API(as Java built-in Reactive Stream implementation), and numerous language improvements.
+The long-awaited Java 9 adds a plenty of new features, including the controversial Java Platform Module System, the new Flow API(as Java built-in Reactive Stream implementation), and numerous language improvements.
 
 * [JShell](./docs/jshell.md) 
 * [Immutable Collections](./docs/immutable-collections.md)
@@ -69,6 +67,14 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 - [Java Magazine: Sept/Oct 2017](http://www.javamagazine.mozaicreader.com/SeptOct2017#&pageSet=0&page=0&contentItem=0)
 - [Java 9: The Good, the Bad, and Private Interface Methods ](https://dzone.com/articles/java-9-the-good-the-bad-and-private-interface-meth)
 
+
+
+### Java 11
+
+* [A closer look at the Java 11 HTTP Client](https://golb.hplar.ch/2019/01/java-11-http-client.html)
+* [Introduction to the Java HTTP Client](https://openjdk.java.net/groups/net/httpclient/intro.html)
+* [(Java HTTP Client) Examples and Recipes](https://openjdk.java.net/groups/net/httpclient/recipes.html)
+
 ### Java 12
 * [New switch Expressions in Java 12](https://blogs.oracle.com/javamagazine/new-switch-expressions-in-java-12)
 
@@ -82,6 +88,7 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 * [Definitive Guide To Switch Expressions In Java 13](https://blog.codefx.org/java/switch-expressions/)
 * [Java 13 – a deep dive into the JDK’s new features](https://jaxenter.com/java-13-jdk-deep-dive-new-features-162272.html), JAXcenter
 * [Java 13 – why text blocks are worth the wait](https://jaxenter.com/java-13-text-blocks-162278.html), JAXcenter 
+* [Java 13 and IntelliJ IDEA](https://blog.jetbrains.com/idea/2020/03/java-14-and-intellij-idea/)
 
 ### Java 14
 
@@ -90,3 +97,7 @@ The long-waiting Java 9 adds plenty of new features, including the controversial
 * [Java 14 Feature Spotlight: Records ](https://www.infoq.com/articles/java-14-feature-spotlight/)
 * [JEP 359: Records (Preview)](https://openjdk.java.net/jeps/359)
 * [Java 14: instanceOf Pattern Matching](https://javabeginnerstutorial.com/core-java-tutorial/java-14-instanceof-pattern-matching/)
+* [Java 14: JDK 14 arriving today](https://jaxenter.com/java-14-update-news-163585.html) by Jaxcenter
+* [New features between Java 8 and Java 14](https://ondro.inginea.eu/index.php/new-features-between-java-8-and-java-14/)
+* [Java 14 and IntelliJ IDEA](https://blog.jetbrains.com/idea/2020/03/java-14-and-intellij-idea/)
+* [A categorized list of all Java and JVM features since JDK 8 to 14](https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-14/)

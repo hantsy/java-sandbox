@@ -1,4 +1,4 @@
-# Next generation of Java Sandbox
+# Java Sandbox
 
 This is a personal sandbox to keep up with the latest Java language features that introduced in Java 8 and later.  
 

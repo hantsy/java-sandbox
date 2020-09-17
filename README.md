@@ -1,4 +1,4 @@
-# Next generation of Java Sandbox
+# Java Sandbox
 
 This is a personal sandbox to keep up with the latest Java language features that introduced in Java 8 and later.  
 
@@ -102,7 +102,9 @@ The long-awaited Java 9 adds a plenty of new features, including the controversi
 * [Java 14 and IntelliJ IDEA](https://blog.jetbrains.com/idea/2020/03/java-14-and-intellij-idea/)
 * [A categorized list of all Java and JVM features since JDK 8 to 14](https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-14/)
 
+
 ### Java 15
 * [ava Feature Spotlight: Sealed Classes ](https://www.infoq.com/articles/java-sealed-classes/)
 * [Java 15 Features: Sealed and Hidden Classes, Pattern Matching And Text Blocks](https://medium.com/better-programming/java-15-features-sealed-and-hidden-classes-pattern-matching-and-text-blocks-38f4efdc8adc)
+
 

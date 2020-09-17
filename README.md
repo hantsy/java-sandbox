@@ -3,14 +3,14 @@
 This is a personal sandbox to keep up with the latest Java language features that introduced in Java 8 and later.  
 
 
-## Getting the latest JDK 
+## Getting the latest Java Development Kit 
 
 You can download a copy of JDK  redistribution from the following website for development purpose. 
 
 * [OpenJDK]( https://openjdk.java.net)
 * [Oracle JDK]( https://java.oracle.com)
-* [AdoptOpenJDK]( https://adoptopenjdk.net/)
-* [Azul JDK](https://www.azul.com/downloads/zulu-community/)
+* [AdoptOpenJDK]( https://adoptopenjdk.net/) by London Java User Group,  ([AdoptOpenJDK joins Eclipse Foundation](https://blog.adoptopenjdk.net/2020/06/adoptopenjdk-to-join-the-eclipse-foundation/))
+* [Zulu OpenJDK](https://www.azul.com/downloads/zulu-community/) by Azul
 
 Additionally, IBM, Amazon, Alibaba, Microsoft, RedHat  have maintained their own Java redistributions.  
 
@@ -101,3 +101,8 @@ The long-awaited Java 9 adds a plenty of new features, including the controversi
 * [New features between Java 8 and Java 14](https://ondro.inginea.eu/index.php/new-features-between-java-8-and-java-14/)
 * [Java 14 and IntelliJ IDEA](https://blog.jetbrains.com/idea/2020/03/java-14-and-intellij-idea/)
 * [A categorized list of all Java and JVM features since JDK 8 to 14](https://advancedweb.hu/a-categorized-list-of-all-java-and-jvm-features-since-jdk-8-to-14/)
+
+### Java 15
+* [ava Feature Spotlight: Sealed Classes ](https://www.infoq.com/articles/java-sealed-classes/)
+* [Java 15 Features: Sealed and Hidden Classes, Pattern Matching And Text Blocks](https://medium.com/better-programming/java-15-features-sealed-and-hidden-classes-pattern-matching-and-text-blocks-38f4efdc8adc)
+

@@ -53,6 +53,10 @@ The long-awaited Java 9 adds a plenty of new features, including the controversi
 * [Record](./docs/record.md)
 * [Small improvements in Text Block](./docs/java14-text-block-improvement.md)
 
+### Java 15
+
+* [Sealed Classes](./docs/sealed-classes.md)
+
 ## References
 
 ### Java 9

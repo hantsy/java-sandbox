@@ -104,7 +104,8 @@ The long-awaited Java 9 adds a plenty of new features, including the controversi
 
 
 ### Java 15
-* [ava Feature Spotlight: Sealed Classes ](https://www.infoq.com/articles/java-sealed-classes/)
+* [Java Feature Spotlight: Sealed Classes ](https://www.infoq.com/articles/java-sealed-classes/)
 * [Java 15 Features: Sealed and Hidden Classes, Pattern Matching And Text Blocks](https://medium.com/better-programming/java-15-features-sealed-and-hidden-classes-pattern-matching-and-text-blocks-38f4efdc8adc)
+* [Inside Java 15: Fourteen JEPs in five buckets](https://blogs.oracle.com/javamagazine/inside-java-15-fourteen-jeps-in-five-buckets)
 
 

@@ -59,7 +59,8 @@ The long-awaited Java 9 adds a plenty of new features, including the controversi
 
 ## Java 16 
 
-* [ToList() method in `Stream`](./docs/java16-stream-tolist.md)
+* [New `toList()` method in `Stream`](./docs/java16-stream-tolist.md)
+* [Serializing and deserializing `Record` with  Jackson 2.12](./docs/record-jackson.md)
 
 ## References
 

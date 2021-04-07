@@ -57,6 +57,10 @@ The long-awaited Java 9 adds a plenty of new features, including the controversi
 
 * [Sealed Classes](./docs/sealed-classes.md)
 
+## Java 16 
+
+* [ToList() method in `Stream`](./docs/java16-stream-tolist.md)
+
 ## References
 
 ### Java 9
@@ -112,4 +116,9 @@ The long-awaited Java 9 adds a plenty of new features, including the controversi
 * [Java 15 Features: Sealed and Hidden Classes, Pattern Matching And Text Blocks](https://medium.com/better-programming/java-15-features-sealed-and-hidden-classes-pattern-matching-and-text-blocks-38f4efdc8adc)
 * [Inside Java 15: Fourteen JEPs in five buckets](https://blogs.oracle.com/javamagazine/inside-java-15-fourteen-jeps-in-five-buckets)
 
+## Java 16
+
+* [Java 16 and IntelliJ IDEA](https://blog.jetbrains.com/idea/2021/03/java-16-and-intellij-idea/)
+* [Java 16 Released ](https://www.infoq.com/news/2021/03/java16-released/)
+* [What We Know about Java 16 and 17 So Far ](https://www.infoq.com/news/2020/11/java16-so-far/)
 

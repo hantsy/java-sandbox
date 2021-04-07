@@ -11,8 +11,9 @@ You can download a copy of JDK  redistribution from the following website for de
 * [Oracle JDK]( https://java.oracle.com)
 * [AdoptOpenJDK]( https://adoptopenjdk.net/) by London Java User Group,  ([AdoptOpenJDK joins Eclipse Foundation](https://blog.adoptopenjdk.net/2020/06/adoptopenjdk-to-join-the-eclipse-foundation/))
 * [Zulu OpenJDK](https://www.azul.com/downloads/zulu-community/) by Azul
+* [Microsoft OpenJDK](https://www.microsoft.com/openjdk)
 
-Additionally, IBM, Amazon, Alibaba, Microsoft, RedHat  have maintained their own Java redistributions.  
+Additionally, IBM, Amazon, Alibaba, RedHat  have maintained their own Java redistributions.  
 
 ## Docs
 

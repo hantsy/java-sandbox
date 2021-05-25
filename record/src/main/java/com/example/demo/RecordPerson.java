@@ -5,11 +5,15 @@
  */
 package com.example.demo;
 
+import javax.json.bind.annotation.JsonbCreator;
+
 /**
  *
  * @author hantsy
  */
 public record RecordPerson( String name, int age) {
+
+	@JsonbCreator
 	public RecordPerson{
 		if(age <= 0) {
 			throw new IllegalArgumentException(

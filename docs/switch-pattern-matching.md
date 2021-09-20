@@ -1,6 +1,8 @@
 # Switch pattern matching example
 
-Java 17 adds type as case parameter in the switch pattern matching, note it is a **preview** feature of Java 17.
+Java 17 adds type as case parameters in the switch pattern matching. 
+
+> NOTE: It is a **preview** feature of Java 17.
 
 ```java
 

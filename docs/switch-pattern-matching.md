@@ -1,6 +1,6 @@
 # Switch pattern matching example
 
-Java 17 adds type as case parameters in the switch pattern matching. 
+Similar to the Scala *case pattern matching* and Kotlin *when*, Java 17 finally allow Java type as `case` condition in the switch statement or expression. 
 
 > NOTE: It is a **preview** feature of Java 17.
 
@@ -27,7 +27,7 @@ public static void printAnimal(Animal a) {
   }
 ```
 
-You can also apply the `sealed` classes in the switch clause.
+The `sealed` classes also can be applied in the `switch` clause.
 
 ```java
 public class SealedSample {
@@ -36,7 +36,6 @@ public class SealedSample {
         calArea(circle);
         calAreaInstanceOf(circle);
     }
-
 
     public static void calArea(Shape shape) {
         var area = switch (shape) {
@@ -47,7 +46,6 @@ public class SealedSample {
         };
         System.out.println("area:" + area);
     }
-
 
     public static void calAreaInstanceOf(Shape shape) {
         double area = 0.0;
@@ -63,7 +61,6 @@ public class SealedSample {
 }
 
 sealed interface Shape permits Circle, Rectangle {
-
 }
 
 record Rectangle(Point lowerLeft, Point upperRight) implements Shape {

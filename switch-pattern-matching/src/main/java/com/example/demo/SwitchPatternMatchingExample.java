@@ -61,23 +61,26 @@ public class SwitchPatternMatchingExample {
     }
 
 
-/*
 
-    class Animal{}
-    class Cat extends Animal{}
-    class Dog extends Animal{}
+    //since java 17 and enable preview.
+	static class Animal {
+	}
 
-    public static void printAnimal() {
+	static class Cat extends Animal {
+	}
+
+	static class Dog extends Animal {
+	}
+
+    @SuppressWarnings("preview")
+	public static void printAnimal(Animal a) {
        System.out.println("This animal is:");
-        Animal cat = new Cat();
-        switch (cat) {
-            case Cat -> System.out.println("cat");
-            case Dog -> System.out.println("dog");
+        switch (a) {
+            case Cat c-> System.out.println("cat");
+            case Dog d-> System.out.println("dog");
             default -> throw new IllegalStateException("unknown");
         };
     }
-
- */
 
     public static final void main(String[] args) {
 
@@ -92,5 +95,8 @@ public class SwitchPatternMatchingExample {
 
         System.out.println("grouped label in pattern matching: ");
         printDayOfWeek();
+        
+        System.out.println("swtich pattern matching: ");
+        printAnimal(new Cat());
     }
 }

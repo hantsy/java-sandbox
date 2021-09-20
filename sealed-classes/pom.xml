@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>sealed-classes</name>
     <properties>
-        <maven.compiler.release>15</maven.compiler.release>
+        <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>

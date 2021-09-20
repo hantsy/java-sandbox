@@ -64,7 +64,7 @@ The long-awaited Java 9 adds a plenty of new features, including the controversi
 * [Serializing and deserializing `Record` with  Jackson 2.12](./docs/record-jackson.md)
 
 ## Java 17 
-* [Switch pattern matching example](./docs/switch-pattern-matching.md)
+* [Java type in switch pattern matching example](./docs/switch-pattern-matching.md)
 
 ## References
 

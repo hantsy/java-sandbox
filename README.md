@@ -10,6 +10,7 @@ You can download a copy of JDK  redistribution from the following website for de
 * [OpenJDK]( https://openjdk.java.net)
 * [Oracle JDK]( https://java.oracle.com)
 * [AdoptOpenJDK]( https://adoptopenjdk.net/) by London Java User Group,  ([AdoptOpenJDK joins Eclipse Foundation](https://blog.adoptopenjdk.net/2020/06/adoptopenjdk-to-join-the-eclipse-foundation/))
+* [RedHat OpenJDK](https://developers.redhat.com/products/openjdk/download)
 * [Zulu OpenJDK](https://www.azul.com/downloads/zulu-community/) by Azul
 * [Microsoft OpenJDK](https://www.microsoft.com/openjdk)
 * [BellSoft Liberica JDK](https://bell-sw.com/pages/downloads)

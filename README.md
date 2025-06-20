@@ -1,11 +1,11 @@
 # Java Sandbox
 
-This is a personal sandbox to keep up with the latest Java language features that introduced in Java 8 and later.  
+This is a personal sandbox for keeping up with the latest Java language features introduced in Java 8 and later.  
 
 
 ## Getting the latest Java Development Kit 
 
-You can download a copy of JDK  redistribution from the following website for development purpose. 
+You can download a copy of the JDK redistribution from the following website for development purposes. 
 
 * [OpenJDK]( https://openjdk.java.net)
 * [Oracle JDK]( https://java.oracle.com)
@@ -16,7 +16,7 @@ You can download a copy of JDK  redistribution from the following website for de
 * [Microsoft OpenJDK](https://www.microsoft.com/openjdk)
 * [BellSoft Liberica JDK](https://bell-sw.com/pages/downloads)
 
-Additionally, the Java giants such as IBM, Amazon, Alibaba, etc. have maintained their own Java redistributions.  
+Additionally, major Java companies such as IBM, Amazon, and Alibaba have maintained their own Java redistributions.  
 
 ## Docs
 
@@ -26,7 +26,7 @@ Additionally, the Java giants such as IBM, Amazon, Alibaba, etc. have maintained
 
 ### Java 9
 
-The long-awaited Java 9 adds a plenty of new features, including the controversial Java Platform Module System, the new Flow API(as Java built-in Reactive Stream implementation), and numerous language improvements.
+The long-awaited Java 9 introduces several new features, including the Java Platform Module System, the new Flow API (Java's built-in Reactive Stream implementation), and numerous language enhancements.
 
 * [JShell](./docs/jshell.md) 
 * [Immutable Collections](./docs/immutable-collections.md)
